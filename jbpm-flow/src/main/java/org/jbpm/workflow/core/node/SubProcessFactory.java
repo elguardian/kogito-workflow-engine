@@ -13,15 +13,13 @@
  * limitations under the License.
  */
 
-package org.jbpm.process.instance;
+package org.jbpm.workflow.core.node;
 
-import org.kie.services.time.impl.JDKTimerService;
-import org.kie.submarine.process.impl.DefaultWorkItemHandlerConfig;
+import org.kie.api.runtime.process.ProcessContext;
+import org.kie.submarine.process.ProcessInstance;
 
-public class LightProcessRuntimeServiceProvider extends AbstractProcessRuntimeServiceProvider {
-
-    public LightProcessRuntimeServiceProvider() {
-        super(new JDKTimerService(),
-              new DefaultWorkItemHandlerConfig());
-    }
+public interface SubProcessFactory<T> {
+    T bind(ProcessContext ctx);
+    ProcessInstance<T> createInstance(T model);
+    void unbind(ProcessContext ctx, T model);
 }

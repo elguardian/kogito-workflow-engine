@@ -13,15 +13,11 @@
  * limitations under the License.
  */
 
-package org.jbpm.process.instance;
+package org.kie.submarine.process.bpmn2;
 
-import org.kie.services.time.impl.JDKTimerService;
-import org.kie.submarine.process.impl.DefaultWorkItemHandlerConfig;
+public class BpmnProcessReaderException extends RuntimeException {
 
-public class LightProcessRuntimeServiceProvider extends AbstractProcessRuntimeServiceProvider {
-
-    public LightProcessRuntimeServiceProvider() {
-        super(new JDKTimerService(),
-              new DefaultWorkItemHandlerConfig());
+    public BpmnProcessReaderException(Throwable cause) {
+        super(cause);
     }
 }

@@ -13,15 +13,31 @@
  * limitations under the License.
  */
 
-package org.jbpm.process.instance;
+package org.kie.submarine.process.impl;
 
-import org.kie.services.time.impl.JDKTimerService;
-import org.kie.submarine.process.impl.DefaultWorkItemHandlerConfig;
+import org.kie.submarine.process.Signal;
 
-public class LightProcessRuntimeServiceProvider extends AbstractProcessRuntimeServiceProvider {
+public final class Sig<T> implements Signal<T> {
 
-    public LightProcessRuntimeServiceProvider() {
-        super(new JDKTimerService(),
-              new DefaultWorkItemHandlerConfig());
+    private final String channel;
+    private final T payload;
+
+    public static <T> org.kie.submarine.process.Signal<T> of(String channel, T payload) {
+        return new Sig<>(channel, payload);
+    }
+
+    protected Sig(String channel, T payload) {
+        this.channel = channel;
+        this.payload = payload;
+    }
+
+    @Override
+    public String channel() {
+        return channel;
+    }
+
+    public T payload() {
+        return payload;
     }
 }
+

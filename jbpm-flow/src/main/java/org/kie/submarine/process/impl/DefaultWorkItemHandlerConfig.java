@@ -13,15 +13,12 @@
  * limitations under the License.
  */
 
-package org.jbpm.process.instance;
+package org.kie.submarine.process.impl;
 
-import org.kie.services.time.impl.JDKTimerService;
-import org.kie.submarine.process.impl.DefaultWorkItemHandlerConfig;
+import org.jbpm.process.instance.impl.demo.DoNothingWorkItemHandler;
+import org.jbpm.process.instance.impl.demo.SystemOutWorkItemHandler;
 
-public class LightProcessRuntimeServiceProvider extends AbstractProcessRuntimeServiceProvider {
-
-    public LightProcessRuntimeServiceProvider() {
-        super(new JDKTimerService(),
-              new DefaultWorkItemHandlerConfig());
-    }
-}
+public class DefaultWorkItemHandlerConfig extends CachedWorkItemHandlerConfig {{
+    register("Log", new DoNothingWorkItemHandler());
+    register("Human Task", new SystemOutWorkItemHandler());
+}}
