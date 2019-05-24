@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-package org.kie.submarine.process.impl;
+package org.kie.kogito.process.impl;
 
 import org.kie.api.event.process.ProcessEventListener;
 

@@ -13,14 +13,14 @@
  * limitations under the License.
  */
 
-package org.kie.submarine.process.impl;
+package org.kie.kogito.process.impl;
 
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Optional;
 
-import org.kie.submarine.process.ProcessInstance;
-import org.kie.submarine.process.ProcessInstances;
+import org.kie.kogito.process.ProcessInstance;
+import org.kie.kogito.process.ProcessInstances;
 
 class MapProcessInstances<T> implements ProcessInstances<T> {
 

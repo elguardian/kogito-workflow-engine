@@ -13,11 +13,11 @@
  * limitations under the License.
  */
 
-package org.kie.submarine.process.impl;
+package org.kie.kogito.process.impl;
 
 import java.util.Map;
 
-import org.kie.submarine.process.WorkItem;
+import org.kie.kogito.process.WorkItem;
 
 public class BaseWorkItem implements WorkItem {
 

@@ -13,13 +13,13 @@
  * limitations under the License.
  */
 
-package org.kie.submarine.process.impl;
+package org.kie.kogito.process.impl;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.kie.api.event.process.ProcessEventListener;
-import org.kie.submarine.process.ProcessEventListenerConfig;
+import org.kie.kogito.process.ProcessEventListenerConfig;
 
 public class CachedProcessEventListenerConfig implements ProcessEventListenerConfig {
 

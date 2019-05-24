@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-package org.kie.submarine.process.impl;
+package org.kie.kogito.process.impl;
 
 import java.util.Collections;
 
@@ -22,11 +22,11 @@ import org.jbpm.process.instance.LightProcessRuntimeContext;
 import org.jbpm.process.instance.LightProcessRuntimeServiceProvider;
 import org.jbpm.process.instance.ProcessRuntimeServiceProvider;
 import org.kie.api.runtime.process.ProcessRuntime;
-import org.kie.submarine.Model;
-import org.kie.submarine.process.Process;
-import org.kie.submarine.process.ProcessConfig;
-import org.kie.submarine.process.ProcessInstance;
-import org.kie.submarine.process.Signal;
+import org.kie.kogito.Model;
+import org.kie.kogito.process.Process;
+import org.kie.kogito.process.ProcessConfig;
+import org.kie.kogito.process.ProcessInstance;
+import org.kie.kogito.process.Signal;
 
 public abstract class AbstractProcess<T extends Model> implements Process<T> {
 

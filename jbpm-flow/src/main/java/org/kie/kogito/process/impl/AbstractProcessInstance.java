@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-package org.kie.submarine.process.impl;
+package org.kie.kogito.process.impl;
 
 import java.lang.reflect.Field;
 import java.util.HashMap;
@@ -25,11 +25,11 @@ import org.jbpm.workflow.instance.WorkflowProcessInstance;
 import org.jbpm.workflow.instance.node.WorkItemNodeInstance;
 import org.kie.api.runtime.process.ProcessRuntime;
 import org.kie.api.runtime.process.WorkItemNotFoundException;
-import org.kie.submarine.Model;
-import org.kie.submarine.process.Process;
-import org.kie.submarine.process.ProcessInstance;
-import org.kie.submarine.process.Signal;
-import org.kie.submarine.process.WorkItem;
+import org.kie.kogito.Model;
+import org.kie.kogito.process.Process;
+import org.kie.kogito.process.ProcessInstance;
+import org.kie.kogito.process.Signal;
+import org.kie.kogito.process.WorkItem;
 
 public abstract class AbstractProcessInstance<T extends Model> implements ProcessInstance<T> {
 

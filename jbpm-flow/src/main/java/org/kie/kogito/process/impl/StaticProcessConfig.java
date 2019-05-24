@@ -13,11 +13,11 @@
  * limitations under the License.
  */
 
-package org.kie.submarine.process.impl;
+package org.kie.kogito.process.impl;
 
-import org.kie.submarine.process.ProcessConfig;
-import org.kie.submarine.process.ProcessEventListenerConfig;
-import org.kie.submarine.process.WorkItemHandlerConfig;
+import org.kie.kogito.process.ProcessConfig;
+import org.kie.kogito.process.ProcessEventListenerConfig;
+import org.kie.kogito.process.WorkItemHandlerConfig;
 
 public class StaticProcessConfig implements ProcessConfig {
 

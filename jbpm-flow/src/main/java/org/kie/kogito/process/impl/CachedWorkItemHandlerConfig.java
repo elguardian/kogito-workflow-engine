@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-package org.kie.submarine.process.impl;
+package org.kie.kogito.process.impl;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -21,7 +21,7 @@ import java.util.Map;
 import java.util.NoSuchElementException;
 
 import org.kie.api.runtime.process.WorkItemHandler;
-import org.kie.submarine.process.WorkItemHandlerConfig;
+import org.kie.kogito.process.WorkItemHandlerConfig;
 
 public class CachedWorkItemHandlerConfig implements WorkItemHandlerConfig {
 

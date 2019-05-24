@@ -13,31 +13,17 @@
  * limitations under the License.
  */
 
-package org.kie.submarine.process.impl;
+package org.kie.kogito.process.impl;
 
-import org.kie.submarine.process.Signal;
+import org.jbpm.process.instance.AbstractProcessRuntimeServiceProvider;
+import org.kie.kogito.process.ProcessConfig;
+import org.kie.services.time.impl.JDKTimerService;
 
-public final class Sig<T> implements Signal<T> {
+public class ConfiguredProcessServices extends AbstractProcessRuntimeServiceProvider {
 
-    private final String channel;
-    private final T payload;
-
-    public static <T> org.kie.submarine.process.Signal<T> of(String channel, T payload) {
-        return new Sig<>(channel, payload);
-    }
-
-    protected Sig(String channel, T payload) {
-        this.channel = channel;
-        this.payload = payload;
-    }
-
-    @Override
-    public String channel() {
-        return channel;
-    }
-
-    public T payload() {
-        return payload;
+    public ConfiguredProcessServices(ProcessConfig config) {
+        super(new JDKTimerService(),
+              config.workItemHandlers(),
+              config.processEventListeners());
     }
 }
-
