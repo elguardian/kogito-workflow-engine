@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Red Hat, Inc. and/or its affiliates.
+ * Copyright 2020 Red Hat, Inc. and/or its affiliates.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,25 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package org.jbpm.workflow.instance.impl;
 
-package org.jbpm.serverless.workflow.parser;
+import java.util.function.UnaryOperator;
 
-import java.util.concurrent.atomic.AtomicLong;
-
-public class DefaultNodeIdGenerator implements NodeIdGenerator {
-
-    private DefaultNodeIdGenerator() {
-    }
-
-    private AtomicLong idCounter = new AtomicLong(1);
-
-    public static DefaultNodeIdGenerator get() {
-        return new DefaultNodeIdGenerator();
-    }
-
-    @Override
-    public long getId() {
-        return idCounter.getAndIncrement();
-    }
-
+/* Added to make it easier to search for ParamResolver function implementations, 
+ * see https://github.com/kiegroup/kogito-runtimes/pull/778#pullrequestreview-493382982 */
+public interface WorkItemHandlerParamResolver extends UnaryOperator<Object> {
 }

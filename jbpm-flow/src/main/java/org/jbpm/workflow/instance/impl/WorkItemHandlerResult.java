@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Red Hat, Inc. and/or its affiliates.
+ * Copyright 2020 Red Hat, Inc. and/or its affiliates.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,8 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.jbpm.serverless.workflow.parser;
+package org.jbpm.workflow.instance.impl;
 
-public interface NodeIdGenerator {
-    long getId();
+import java.util.function.BiFunction;
+
+/* Added to make it easier to search for ResultHandler bifunction implementations, 
+ * see https://github.com/kiegroup/kogito-runtimes/pull/778#pullrequestreview-493382982 */
+public interface WorkItemHandlerResult extends BiFunction<Object, Object, Object> {
 }
