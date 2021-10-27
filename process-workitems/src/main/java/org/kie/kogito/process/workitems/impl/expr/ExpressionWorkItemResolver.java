@@ -13,16 +13,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.kie.kogito.process.workitems.impl;
+package org.kie.kogito.process.workitems.impl.expr;
 
 import org.kie.kogito.internal.process.runtime.KogitoWorkItem;
+import org.kie.kogito.process.workitems.impl.WorkItemParamResolver;
 
 public abstract class ExpressionWorkItemResolver implements WorkItemParamResolver {
 
+    protected final ExpressionHandler expressionHandler;
     protected final String expression;
     private final String paramName;
 
-    protected ExpressionWorkItemResolver(String expression, String paramName) {
+    protected ExpressionWorkItemResolver(String language, String expression, String paramName) {
+        this.expressionHandler = ExpressionHandlerFactory.get(language);
         this.expression = expression;
         this.paramName = paramName;
     }
