@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Red Hat, Inc. and/or its affiliates.
+ * Copyright 2022 Red Hat, Inc. and/or its affiliates.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,14 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.kie.kogito.process.workitems.impl;
+package org.kie.kogito.process.workitems;
 
-import java.util.function.Function;
+import java.util.Map;
 
-import org.kie.kogito.internal.process.runtime.KogitoWorkItem;
+import org.kie.kogito.process.workitems.impl.WorkItemParamResolver;
 
-/* Added to make it easier to search for ParamResolver function implementations, 
- * see https://github.com/kiegroup/kogito-runtimes/pull/778#pullrequestreview-493382982 */
-public interface WorkItemParamResolver<T> extends Function<KogitoWorkItem, T> {
-
+public interface WorkParametersFactory extends WorkItemParamResolver<Map<String, Object>> {
 }
